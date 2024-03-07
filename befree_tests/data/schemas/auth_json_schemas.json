@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "token_type": {
+      "type": "string"
+    },
+    "token": {
+      "type": "string"
+    },
+    "expires_at": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "token_type",
+    "token",
+    "expires_at"
+  ]
+}
