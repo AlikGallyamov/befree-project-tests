@@ -1,0 +1,201 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "date_of_birth": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "status": {
+      "type": "number"
+    },
+    "tmp_password": {
+      "type": "string"
+    },
+    "customer_group_id": {
+      "type": "number"
+    },
+    "subscribed_to_news_letter": {
+      "type": "number"
+    },
+    "is_verified": {
+      "type": "number"
+    },
+    "token": {},
+    "remember_token": {},
+    "created_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "phone_verified": {
+      "type": "number"
+    },
+    "notification": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "string"
+    },
+    "reg_source": {
+      "type": "string"
+    },
+    "last_login": {
+      "type": "string"
+    },
+    "loyalty_program_registered_at": {
+      "type": "string"
+    },
+    "loyalty_program_card_number": {
+      "type": "string"
+    },
+    "loyalty_program_bonus_amount": {
+      "type": "string"
+    },
+    "loyalty_program_phone_number": {
+      "type": "string"
+    },
+    "fcm_token": {},
+    "apple": {},
+    "loyalty_level_id": {
+      "type": "number"
+    },
+    "loyalty_percent": {
+      "type": "string"
+    },
+    "deleted_at": {},
+    "is_email_invalid": {
+      "type": "number"
+    },
+    "old_email": {},
+    "counts": {
+      "type": "object",
+      "properties": {
+        "orders_count": {
+          "type": "number"
+        },
+        "wishlist_count": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "orders_count",
+        "wishlist_count"
+      ]
+    },
+    "loyality_data": {
+      "type": "array",
+      "items": {}
+    },
+    "cartId": {
+      "type": "string"
+    },
+    "level": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "sum": {
+          "type": "number"
+        },
+        "goal": {
+          "type": "number"
+        },
+        "order_number": {
+          "type": "number"
+        },
+        "description": {
+          "type": "string"
+        },
+        "next_move_info": {
+          "type": "string"
+        },
+        "next_wait_info": {
+          "type": "string"
+        },
+        "category_image": {},
+        "category_url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "sum",
+        "goal",
+        "order_number",
+        "description",
+        "next_move_info",
+        "next_wait_info",
+        "category_image",
+        "category_url"
+      ]
+    },
+    "addresses": {
+      "type": "array",
+      "items": {}
+    }
+  },
+  "required": [
+    "id",
+    "first_name",
+    "last_name",
+    "gender",
+    "date_of_birth",
+    "email",
+    "status",
+    "tmp_password",
+    "customer_group_id",
+    "subscribed_to_news_letter",
+    "is_verified",
+    "token",
+    "remember_token",
+    "created_at",
+    "updated_at",
+    "phone",
+    "phone_verified",
+    "notification",
+    "avatar",
+    "reg_source",
+    "last_login",
+    "loyalty_program_registered_at",
+    "loyalty_program_card_number",
+    "loyalty_program_bonus_amount",
+    "loyalty_program_phone_number",
+    "fcm_token",
+    "apple",
+    "loyalty_level_id",
+    "loyalty_percent",
+    "deleted_at",
+    "is_email_invalid",
+    "old_email",
+    "counts",
+    "loyality_data",
+    "cartId",
+    "level",
+    "addresses"
+  ]
+}

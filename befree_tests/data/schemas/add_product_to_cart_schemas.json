@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "is_active": {
+      "type": "number"
+    },
+    "customer_id": {
+      "type": "number"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "city": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "kladr": {
+          "type": "string"
+        },
+        "fias_id": {
+          "type": "string"
+        },
+        "golden_record": {
+          "type": "string"
+        },
+        "is_has_stores": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "kladr",
+        "fias_id",
+        "golden_record",
+        "is_has_stores"
+      ]
+    }
+  },
+  "cartToken": {
+    "type": "string"
+  },
+  "required": [
+    "id",
+    "is_active",
+    "customer_id",
+    "created_at",
+    "updated_at",
+    "city",
+    "newItem",
+    "cartToken"
+  ]
+}

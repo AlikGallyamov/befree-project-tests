@@ -1,6 +1,7 @@
 import os
 
 from dotenv import load_dotenv
+
 from pydantic_settings import BaseSettings
 from selenium.webdriver.chrome.options import Options
 from selene import browser
@@ -24,6 +25,7 @@ class BrowserSettings(BaseSettings):
     password: str = os.getenv('password')
     base_url: str = os.getenv('base_url')
     back_url: str = os.getenv('auth_url')
+    catalog_url: str = os.getenv('catalog_url')
 
 
 def config_browser():

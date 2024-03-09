@@ -6,8 +6,21 @@ auth_body = {
 }
 
 add_product_body = {
-    "cartId": "eyJpdiI6IjA0QWZ2M1VKVDJRK1hXZ09PNVJcL0J3PT0iLCJ2YWx1ZSI6IlhtQkxiXC9oa01Db00wc2xzU3Q5N3dBPT0iLCJtYWMiOiJiMTUxZWI5NTA4MTdjNDNiNjcyZTc0NTJhNGRjY2IyMDUzYWFlY2UwMzdjZTNmYzQ1ZDZkMTg0MzY3MzMzMTM5In0=",
-    "product": 769757,
+    "cartId": None,
+    "product": '',
     "quantity": 1,
     "city": "Уфа"
+}
+
+headers_auth = {
+    'Authorization': ''
+}
+delete_item_from_cart_body = {
+    "city": "Уфа",
+    "itemIds": []
+}
+
+favorites = {
+    "article": "",
+    "color_code": None
 }
