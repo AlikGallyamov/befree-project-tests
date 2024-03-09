@@ -6,3 +6,4 @@ pydantic-settings
 requests
 jsonschema
 curlify
+Appium-Python-Client==3.1.1

@@ -3,7 +3,7 @@ from selene import browser
 from befree_tests.api.objects_api import ObjectsApi
 from befree_tests.contorls import attach
 from befree_tests.pages.main_page import MainPage
-from config import config_browser
+from config import config_browser, config_mobile
 from befree_tests.models.user_item_data import card_blouse, card_jacket, card_bomber_jacket, card_cardigan, \
     card_t_shirt, card_oversize
 
@@ -66,7 +66,7 @@ def get_token():
     return token
 
 
-@pytest.fixture(autouse=True, scope='session')
+@pytest.fixture(autouse=False, scope='session')
 def get_favorite_uuid(get_token):
     token = get_token
     objects_api = ObjectsApi()
@@ -98,3 +98,32 @@ def get_cart_id(get_token):
     token = get_token
     cart_id = objects_api.get_cart_info(token).json()['cartId']
     return cart_id
+
+@pytest.fixture
+def android_app_manage(context):
+    config_mobile(context=context)
+
+    yield
+    if context == 'bstack':
+        session_id = browser.driver.session_id
+        attach.get_video(session_id)
+    attach.get_screenshot()
+    attach.get_page_source()
+
+    browser.quit()
+
+
+def pytest_addoption(parser):
+    parser.addoption(
+        "--context",
+        default="local_emulator"
+    )
+
+
+def pytest_configure(config):
+    context = config.getoption("--context")
+
+
+@pytest.fixture
+def context(request):
+    return request.config.getoption("--context")
