@@ -50,12 +50,13 @@ mobile
 
 ---
 
-Отчёт о прохождении будет сгенерирован в allure-report с подробными шагами, скриншотами, видео.
+Отчёт о прохождении будет сгенерирован в Allure TestOps с подробными шагами, скриншотами, видео.
 Также, при необходимости можно подключить уведомления в Telegram, skype, discord, slack  
 
 
-<img align="left" src="readme_files/allure_report.png" width="600" height="300"/>  
-<img align="center" src="readme_files/tg_screen.png" width="200" height="300"/>.
+<img align="left" src="readme_files/test_ops.png" width="320" height="300"/>  
+<img align="left" src="readme_files/test_ops_test_case.png" width="390" height="300"/>  
+
 
 ---
 
@@ -64,18 +65,18 @@ mobile
 
 ###### Удаленно
 
-1. Открыть <a href="https://jenkins.autotests.cloud/job/009-JenkiLi-wildberries/"> jenkins-control  </a>
+1. Открыть <a href="https://jenkins.autotests.cloud/job/009-JenkiLi-Befree/"> jenkins-control  </a>
 2. Нажать Build now
 3. Дождаться завершения 
 4. Перейти в allure отчет
 
-<img src="readme_files/jenkins_control.png" width="400" height="200"/>  
+<img src="readme_files/jenkins.png" width="720" height="400"/>  
 
 ###### Локально
 
 1. Клонируйте репозиторий
 ```ruby
-git clone https://github.com/AlikGallyamov/Wildberries.git
+git clone https://github.com/AlikGallyamov/Befree.git
 ```
 2. Создайте и активируйте виртуальное окружение
   ```ruby
