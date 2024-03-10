@@ -41,7 +41,7 @@ mobile
 Пример выполнения теста
 
 <p align="left">
-<img src="readme_files/web.gif" width="500" height="400"/>  
+<img src="readme_files/web.gif" width="680" height="400"/>  
 <img src="readme_files/mobile.gif" width="190" height="400"/>
 
 </p>
@@ -54,8 +54,8 @@ mobile
 Также, при необходимости можно подключить уведомления в Telegram, skype, discord, slack  
 
 
-<img align="left" src="readme_files/test_ops.png" width="320" height="300"/>  
-<img align="left" src="readme_files/test_ops_test_case.png" width="390" height="300"/>  
+<img align="left" src="readme_files/test_ops.png" width="450" height="300"/>  
+<img align="left" src="readme_files/test_ops_test_case.png" width="450" height="300"/>  
 
 
 ---
@@ -70,7 +70,7 @@ mobile
 3. Дождаться завершения 
 4. Перейти в allure отчет
 
-<img src="readme_files/jenkins.png" width="720" height="400"/>  
+<img src="readme_files/jenkins.png" width="900" height="400"/>  
 
 ###### Локально
 
