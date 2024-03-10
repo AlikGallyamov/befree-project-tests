@@ -81,7 +81,7 @@ git clone https://github.com/AlikGallyamov/Befree.git
 2. Создайте и активируйте виртуальное окружение
   ```ruby
   python -m venv .venv
-  cd Wildberries
+  cd Befree
   .venv\Scripts\activate
   ```
 3. Установите зависимости с помощью pip
