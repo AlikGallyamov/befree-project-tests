@@ -1,9 +1,11 @@
+import os
+
 import allure
 from allure_commons.types import AttachmentType
-from config import SettingsMobile
-import requests
-from selene import browser
 
+import requests
+
+from selene import browser
 
 
 def add_screenshot(browser):
@@ -29,14 +31,13 @@ def add_video(browser):
     allure.attach(html, 'video_' + browser.driver.session_id, AttachmentType.HTML, '.html')
 
 
-
-
 def get_video(session_id):
-    config = SettingsMobile()
+    user_name = os.environ.get("user_name")
+    access_key = os.environ.get("access_key")
 
     bstack_session = requests.get(
         f'https://api.browserstack.com/app-automate/sessions/{session_id}.json',
-        auth=(config.user_name, config.access_key),
+        auth=(user_name, access_key),
     ).json()
     video_url = bstack_session['automation_session']['video_url']
 

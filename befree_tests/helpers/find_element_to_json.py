@@ -14,6 +14,7 @@ def search_json(json_data, key, value):
                 return result
     return result
 
+
 def search_json_value(json_data, key, value):
     result = None
     if isinstance(json_data, dict):
@@ -29,5 +30,3 @@ def search_json_value(json_data, key, value):
             if result is not None:
                 return result
     return result
-
-

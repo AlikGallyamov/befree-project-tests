@@ -18,6 +18,7 @@ card_blouse = Item(
     product_variation_id_in_catalog=643054,
     product_variation_id_in_card=643055
 )
+
 card_jacket = Item(
     item_title='куртка женская',
     item_price='5999',

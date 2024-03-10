@@ -1,16 +1,23 @@
+import allure
 import pytest
+from dotenv import load_dotenv
 from selene import browser
 from befree_tests.api.objects_api import ObjectsApi
 from befree_tests.contorls import attach
+
 from befree_tests.pages.main_page import MainPage
-from config import config_browser, config_mobile
+
 from befree_tests.models.user_item_data import card_blouse, card_jacket, card_bomber_jacket, card_cardigan, \
     card_t_shirt, card_oversize
 
 
 @pytest.fixture(autouse=False)
-def browser_settings():
-    config_browser()
+def browser_settings(request):
+    context = request.config.getoption("--context")
+
+    from config_browser import config_browser
+
+    config_browser.browser_option(context)
 
     yield
 
@@ -99,10 +106,29 @@ def get_cart_id(get_token):
     cart_id = objects_api.get_cart_info(token).json()['cartId']
     return cart_id
 
-@pytest.fixture
-def android_app_manage(context):
-    config_mobile(context=context)
 
+def pytest_addoption(parser):
+    parser.addoption(
+        "--context",
+        default="bstack",
+        choices=['bstack', 'local_emulator'],
+    )
+
+
+@pytest.fixture
+def android_app_manage(request):
+    context = request.config.getoption("--context")
+    load_dotenv('.env')
+    load_dotenv('.env.stage')
+    load_dotenv(dotenv_path=f'.env.{context}')
+    from config_mobile import config_mobile
+    from appium import webdriver
+    options = config_mobile.to_driver_options(context)
+    with allure.step('init app session'):
+        browser.config.driver = webdriver.Remote(
+            config_mobile.remote_url,
+            options=options
+        )
     yield
     if context == 'bstack':
         session_id = browser.driver.session_id
@@ -111,19 +137,3 @@ def android_app_manage(context):
     attach.get_page_source()
 
     browser.quit()
-
-
-def pytest_addoption(parser):
-    parser.addoption(
-        "--context",
-        default="local_emulator"
-    )
-
-
-def pytest_configure(config):
-    context = config.getoption("--context")
-
-
-@pytest.fixture
-def context(request):
-    return request.config.getoption("--context")
