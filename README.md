@@ -54,8 +54,8 @@ mobile
 Также, при необходимости можно подключить уведомления в Telegram, skype, discord, slack  
 
 
-<img align="left" src="readme_files/test_ops.png" width="300" height="400"/>  
-<img src="readme_files/test_ops_test_case.png" width="300" height="400"/>  
+<img align="left" src="readme_files/test_ops.png" width="400" height="300"/>  
+<img src="readme_files/test_ops_test_case.png" width="400" height="300"/>  
 
 
 ---
