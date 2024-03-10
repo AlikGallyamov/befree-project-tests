@@ -54,21 +54,21 @@ mobile
 Также, при необходимости можно подключить уведомления в Telegram, skype, discord, slack  
 
 
-<img align="left" src="readme_files/test_ops.png" width="400" height="300"/>  
-<img align="left" src="readme_files/test_ops_test_case.png" width="400" height="300"/>  
+<img align="left" src="readme_files/test_ops.png" width="400" height="400"/>  
+<img src="readme_files/test_ops_test_case.png" width="400" height="400"/>  
 
 
 ---
 
 
-### Как запустить
 
+### Как запустить  
 ###### Удаленно
 
 1. Открыть <a href="https://jenkins.autotests.cloud/job/009-JenkiLi-Befree/"> jenkins-control  </a>
 2. Нажать Build now
 3. Дождаться завершения 
-4. Перейти в allure отчет
+4. Перейти в allure отчет  
 
 <img src="readme_files/jenkins.png" width="800" height="400"/>  
 
