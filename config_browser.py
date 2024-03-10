@@ -13,7 +13,7 @@ def load_env_credential():
 
 class BrowserSettings(BaseSettings):
     load_env_credential()
-    window_width: str = '1600'
+    window_width: str = '1900'
     window_height: str = '1028'
     email: str = os.getenv('email')
 
