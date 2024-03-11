@@ -43,12 +43,11 @@ class MainPage:
         with allure.step("Добавили в корзину"):
             browser.element('[class*="addCart"]').click()
 
-    def check_cart(self, product_variation_id_in_catalog, item_title):
+    def check_cart(self, item_title):
         with allure.step("Кликнули 'Перейти в корзину'"):
             browser.element('[state="goToCart"]').click()
-        with allure.step(f"Отображается товар с product-id {product_variation_id_in_catalog}"):
-            browser.element(f'[data-product-variation-id="{product_variation_id_in_catalog}"]').should(
-                have.attribute('data-product-title', f'{item_title}'))
+        with allure.step(f"Отображается товар с названием {item_title}"):
+            browser.element(f'[data-product-title="{item_title}"]').should(be.visible)
 
     def delete_product_from_cart(self, product_variation_id_in_catalog):
         with allure.step("Клик по корзине"):

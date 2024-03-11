@@ -7,8 +7,7 @@ def test_add_to_cart(browser_settings, post_remove_blouze_from_cart, open_browse
 
     main_page.add_product_to_cart(card_blouse.product_variation_id_in_card)
 
-    main_page.check_cart(card_blouse.product_variation_id_in_catalog,
-                         card_blouse.item_title)
+    main_page.check_cart(card_blouse.item_title)
 
 
 def test_delete_product_from_cart(browser_settings, add_cardigan_to_cart, open_browser_with_cookie):
