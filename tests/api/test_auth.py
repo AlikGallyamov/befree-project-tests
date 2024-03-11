@@ -5,7 +5,7 @@ from befree_tests.api.objects_api import ObjectsApi
 from befree_tests.helpers.get_schemas import get_json_schemas
 
 
-def test_auth_with_api():
+def test_auth():
     objects_api = ObjectsApi()
 
     response = objects_api.get_auth_response()

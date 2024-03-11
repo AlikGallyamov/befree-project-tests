@@ -53,7 +53,7 @@ def add_cardigan_to_cart(get_token):
 
 
 @pytest.fixture()
-def post_remove_blouze_from_cart(get_token):
+def post_remove_blouse_from_cart(get_token):
     objects_api = ObjectsApi()
     token = get_token
     objects_api.remove_item_from_cart(token, card_blouse.product_variation_id_in_catalog)

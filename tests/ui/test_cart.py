@@ -2,7 +2,7 @@ from befree_tests.data.user_item_data import card_blouse, card_cardigan
 from befree_tests.pages.main_page import MainPage
 
 
-def test_add_to_cart(browser_settings, post_remove_blouze_from_cart, open_browser_with_cookie, ):
+def test_add_to_cart(browser_settings, post_remove_blouse_from_cart, open_browser_with_cookie, ):
     main_page = MainPage()
 
     main_page.add_product_to_cart(card_blouse.product_variation_id_in_card)
