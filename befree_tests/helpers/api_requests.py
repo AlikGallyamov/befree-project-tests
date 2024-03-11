@@ -15,8 +15,12 @@ def request_api(url, endpoint, methode, **kwargs):
     if methode == "delete":
         response = requests.delete(url + endpoint, **kwargs)
     if endpoint != '/rest/V3/login':
-        with step(f"POST{endpoint}"):
+        with step(f"{methode}{endpoint}"):
             curl = curlify.to_curl(response.request)
-            logging.info(curl)
+            logging.info(curlify.to_curl(response.request))
+            logging.info(response.request.url)
+            logging.info(response.status_code)
+            logging.info(response.text)
             allure.attach(body=curl, name="curl", attachment_type=AttachmentType.TEXT, extension="txt")
+
     return response
