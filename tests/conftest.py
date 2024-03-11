@@ -7,7 +7,7 @@ from befree_tests.contorls import attach
 
 from befree_tests.pages.main_page import MainPage
 
-from befree_tests.models.user_item_data import card_blouse, card_jacket, card_bomber_jacket, card_cardigan, \
+from befree_tests.data.user_item_data import card_blouse, card_jacket, card_bomber_jacket, card_cardigan, \
     card_t_shirt, card_oversize
 
 

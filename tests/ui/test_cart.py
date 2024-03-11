@@ -1,4 +1,4 @@
-from befree_tests.models.user_item_data import card_blouse, card_cardigan
+from befree_tests.data.user_item_data import card_blouse, card_cardigan
 from befree_tests.pages.main_page import MainPage
 
 

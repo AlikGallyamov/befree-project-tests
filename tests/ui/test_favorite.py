@@ -1,4 +1,4 @@
-from befree_tests.models.user_item_data import card_t_shirt
+from befree_tests.data.user_item_data import card_t_shirt
 from befree_tests.pages.favorites_page import FavoritePage
 from befree_tests.pages.main_page import MainPage
 

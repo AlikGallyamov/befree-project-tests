@@ -3,7 +3,7 @@ from jsonschema import validate
 
 from befree_tests.api.objects_api import ObjectsApi
 from befree_tests.helpers.get_schemas import get_json_schemas
-from befree_tests.models.user_item_data import card_jacket, card_bomber_jacket
+from befree_tests.data.user_item_data import card_jacket, card_bomber_jacket
 
 
 def test_add_product_via_api(get_token, post_remove_jacket_from_cart):

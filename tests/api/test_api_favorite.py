@@ -3,7 +3,7 @@ from jsonschema import validate
 
 from befree_tests.api.objects_api import ObjectsApi
 from befree_tests.helpers.get_schemas import get_json_schemas
-from befree_tests.models.user_item_data import card_oversize
+from befree_tests.data.user_item_data import card_oversize
 
 
 def test_add_to_favorite(get_token, get_favorite_uuid, delete_favorite_card_oversize):
