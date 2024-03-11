@@ -50,12 +50,16 @@ mobile
 
 ---
 
-Отчёт о прохождении будет сгенерирован в Allure TestOps с подробными шагами, скриншотами, видео.
-Также, при необходимости можно подключить уведомления в Telegram, skype, discord, slack
+Отчёт о прохождении будет сгенерирован в Allure
 
 
-<img align="left" src="resources/readme_files/test_ops.png" width="400" height="300"/>  
-<img src="resources/readme_files/test_ops_test_case.png" width="400" height="300"/>  
+<img align="left" src="resources/readme_files/test_ops.png" width="800" height="300"/>    
+
+---
+
+Также настроена интеграция с Allure TestOps с подробными шагами, скриншотами, видео. При необходимости можно подключить уведомления в Telegram, skype, discord, slack
+
+<img src="resources/readme_files/test_ops_test_case.png" width="800" height="300"/>    
 
 
 ---
@@ -64,7 +68,7 @@ mobile
 
 ###### Удаленно
 
-1. Открыть <a href="https://jenkins.autotests.cloud/job/009-JenkiLi-Befree/"> jenkins-control  </a>
+1. Открыть <a href="https://jenkins.autotests.cloud/job/009-JenkiLi-Befree/"> jenkins  </a>
 2. Нажать Build now
 3. Дождаться завершения
 4. Перейти в allure отчет
@@ -75,9 +79,7 @@ mobile
 
 1. Клонируйте репозиторий
 
-```ruby
-git clone https://github.com/AlikGallyamov/Befree.git
-```
+
 
 2. Создайте и активируйте виртуальное окружение
 
