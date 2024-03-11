@@ -3,7 +3,7 @@ from typing import Optional
 
 from pydantic_settings import BaseSettings
 
-from befree_tests.contorls.utils import get_local_path_app
+from befree_tests.contorls.utils import get_project_path
 
 
 class SettingsMobile(BaseSettings):
@@ -13,7 +13,7 @@ class SettingsMobile(BaseSettings):
     access_key: Optional[str] = os.getenv('access_key')
     remote_url: str = os.getenv('remote_url')
     device_name: str = os.getenv('device_name')
-    app_url: str = os.getenv('app_url', get_local_path_app())
+    app_url: str = os.getenv('app_url', get_project_path()+'/befree-8-3-1.apk')
 
     def to_driver_options(self, context):
         from appium.options.android import UiAutomator2Options

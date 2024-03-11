@@ -1,9 +1,9 @@
 selene==2.0.0rc8
-pytest~=7.4.3
-allure-pytest
-python-dotenv
-pydantic-settings
-requests
-jsonschema
-curlify
+pytest==7.4.3
+allure-pytest==2.13.2
+python-dotenv==1.0.0
+pydantic-settings==2.2.1
+requests==2.31.0
+jsonschema==4.21.1
+curlify==2.2.1
 Appium-Python-Client==3.1.1
