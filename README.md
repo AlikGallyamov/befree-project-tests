@@ -53,13 +53,13 @@ mobile
 Отчёт о прохождении будет сгенерирован в Allure
 
 
-<img align="left" src="resources/readme_files/test_ops.png" width="900" height="300"/>    
+<img align="left" src="resources/readme_files/test_ops.png" width="900" height="500"/>    
 
 ---
 
 Также настроена интеграция с Allure TestOps с подробными шагами, скриншотами, видео. При необходимости можно подключить уведомления в Telegram, skype, discord, slack
 
-<img align="left" src="resources/readme_files/test_ops_test_case.png" width="900" height="300"/>    
+<img align="left" src="resources/readme_files/test_ops_test_case.png" width="900" height="500"/>    
 
 
 ---
