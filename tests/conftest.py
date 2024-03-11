@@ -5,7 +5,7 @@ from selene import browser
 from befree_tests.api.objects_api import ObjectsApi
 from befree_tests.contorls import attach
 
-from befree_tests.pages.main_page import MainPage
+from befree_tests.pages.main_page import main_page
 
 from befree_tests.data.user_item_data import card_blouse, card_jacket, card_bomber_jacket, card_cardigan, \
     card_t_shirt, card_oversize
@@ -38,7 +38,6 @@ def add_bomber_jacket_to_cart(get_token):
 
 @pytest.fixture()
 def open_browser_with_cookie():
-    main_page = MainPage()
     objects_api = ObjectsApi()
     response = objects_api.get_auth_response()
     main_page.open_browser_with_cookie(response)

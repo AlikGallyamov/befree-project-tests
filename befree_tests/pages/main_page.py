@@ -86,6 +86,51 @@ class MainPage:
             command.js.scroll_into_view)
         with allure.step(f"Добавляем товар {product_variation_id_in_card} в избранное"):
             browser.element(f'[data-product-variation-id="{product_variation_id_in_card}"] [type="button"]').click()
-        browser.element('[href="/favorites"] [class*="kMteZM"]').should(have.text('1'))
+        browser.element('[href="/favorites"] [class*="kMteZM"]').should(have.text('2'))
         with allure.step("Перешли в избранное"):
             browser.element('[href="/favorites"]').click()
+
+    def set_filter_color(self):
+        with allure.step("Открываем виджет"):
+            browser.element('[href="/zhenskaya"]').click()
+        with allure.step("Выбираем категорию"):
+            browser.element('[href*="yng"]').click()
+        with allure.step("Открываем окно фильтра"):
+            browser.element('[class*="kiBazB"]').click()
+        with allure.step("Разворачиваем варианты цвета"):
+            browser.all('[class*="dYxTe"] > li').second.click()
+        with allure.step("Выбираем цвет"):
+            browser.all('[class*="cAlvXG"] [class*="fPXEDZ"] > div').first.click()
+        with allure.step("Сохраняем фильтр"):
+            browser.element('[class*="iPxsfi"]').click()
+
+    def check_color(self, product_variation_id_in_card, color):
+        with allure.step("Открываем отфильтрованную карточку"):
+            browser.element(f'[data-product-id="{product_variation_id_in_card}"]').click()
+        with allure.step(f"Цвет товара {color}"):
+            browser.element('[class*=" jLMHVe"] [class*="cfAPXo"]').should(have.text(color))
+
+    def set_filter_size(self):
+        with allure.step("Открываем виджет"):
+            browser.element('[href="/zhenskaya"]').click()
+        with allure.step("Выбираем категорию"):
+            browser.element('[href*="yng"]').click()
+        with allure.step("Открываем окно фильтра"):
+            browser.element('[class*="kiBazB"]').click()
+        with allure.step("Разворачиваем варианты размера"):
+            browser.all('[class*="dYxTe"] > li')[2].click()
+        with allure.step("Выбираем размер"):
+            browser.all('[view="group"] > button')[5].click()
+        with allure.step("Сохраняем фильтр"):
+            browser.element('[class*="iPxsfi"]').click()
+
+    def check_size(self, product_variation_id_in_catalog):
+        with allure.step("Открываем отфильтрованную карточку"):
+            browser.element(f'[data-product-variation-id="{product_variation_id_in_catalog}"]').click()
+        with allure.step("Выбираем размер M"):
+            browser.all('[view="group"] > button')[3].click()
+        with allure.step('Кнопка "Добавить" доступна'):
+            browser.element('[class*="jQTwTf"]').should(have.text('добавить'))
+
+
+main_page = MainPage()

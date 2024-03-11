@@ -15,7 +15,6 @@ class BrowserSettings(BaseSettings):
     load_env_credential()
     window_width: str = '1900'
     window_height: str = '1028'
-    email: str = os.getenv('email')
 
     def browser_option(self, context):
         load_dotenv(get_project_path() + '/.env')
@@ -42,7 +41,6 @@ class BrowserSettings(BaseSettings):
                 command_executor=f"https://{user_name_capabilities}:{password_capabilities}@selenoid.autotests.cloud/wd/hub",
                 options=options)
             browser.config.driver = driver
-
         browser.config.driver_options = driver_options
         browser.config.base_url = base_url
         browser.config.window_width = self.window_width

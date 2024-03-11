@@ -13,3 +13,5 @@ def test_auth():
         assert response.status_code == 200
     with allure.step('Проверяем response на соответствие json схеме'):
         validate(response.json(), get_json_schemas("auth_json_schemas"))
+    with allure.step('Проверяем response на наличие токена в значении ключа'):
+        assert len(response.json()['token']) > 1

@@ -13,7 +13,7 @@ class SettingsMobile(BaseSettings):
     access_key: Optional[str] = os.getenv('access_key')
     remote_url: str = os.getenv('remote_url')
     device_name: str = os.getenv('device_name')
-    app_url: str = os.getenv('app_url', get_project_path()+'/befree-8-3-1.apk')
+    app_url: str = os.getenv('app_url', get_project_path() + '/befree-8-3-1.apk')
 
     def to_driver_options(self, context):
         from appium.options.android import UiAutomator2Options

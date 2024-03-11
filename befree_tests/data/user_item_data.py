@@ -10,6 +10,7 @@ class Item:
     product_variation_id_in_card: int
     code: Optional[str] = None
     color_code: Optional[str] = None
+    color: Optional[str] = None
 
 
 card_blouse = Item(
@@ -63,4 +64,23 @@ card_oversize = Item(
     product_variation_id_in_card=642436,
     code='2411601444',
     color_code='50'
+)
+
+card_dress = Item(
+    item_title='Платье-комбинация миди атласное',
+    item_price='2599',
+    product_variation_id_in_catalog=770524,
+    product_variation_id_in_card=770524,
+    code='2421414109',
+    color_code='55'
+)
+
+card_t_shirt_cropped = Item(
+    item_title='Майка-топ укороченная в рубчик',
+    item_price='799',
+    product_variation_id_in_catalog=15107,
+    product_variation_id_in_card=15107,
+    code='2422121007',
+    color_code='55',
+    color='бежевый'
 )
