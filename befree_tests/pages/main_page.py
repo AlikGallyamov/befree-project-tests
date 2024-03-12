@@ -105,6 +105,8 @@ class MainPage:
             browser.element('[class*="iPxsfi"]').click()
 
     def check_color(self, product_variation_id_in_card, color):
+        with allure.step("Ждём появление фильтра на странице"):
+            browser.element('[class="sc-e0ccc516-1 GHByl"]').should(be.visible)
         with allure.step("Открываем отфильтрованную карточку"):
             browser.element(f'[data-product-id="{product_variation_id_in_card}"]').click()
         with allure.step(f"Цвет товара {color}"):
