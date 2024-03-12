@@ -57,13 +57,19 @@ mobile
 
 ---
 
-Также настроена интеграция с Allure TestOps с подробными шагами, скриншотами, видео. При необходимости можно подключить уведомления в Telegram, skype, discord, slack
+Также настроена интеграция с Allure TestOps с подробными шагами, скриншотами, видео
 
 <img align="left" src="resources/readme_files/test_ops_test_case.png" width="900" height="600"/>    
 
 
 ---
 
+Настроена интеграция с Jira
+
+<img align="left" src="resources/readme_files/jira.png" width="900" height="600"/>    
+
+
+---
 ### Как запустить
 
 ###### Удаленно
@@ -97,7 +103,7 @@ source .venv/bin/activate
 4. Запустите автотесты
 
   ```ruby
-  pytest tests --next local_emulator
+  pytest tests --context local_emulator
   ```
 
 5. Получите отчёт allure
