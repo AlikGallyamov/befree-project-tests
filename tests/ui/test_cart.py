@@ -11,3 +11,4 @@ def test_add_to_cart(browser_settings, post_remove_blouse_from_cart, open_browse
 def test_delete_product_from_cart(browser_settings, add_cardigan_to_cart, open_browser_with_cookie):
     main_page.delete_product_from_cart(card_cardigan.product_variation_id_in_catalog)
     main_page.product_is_not_displayed(card_cardigan.product_variation_id_in_catalog)
+
